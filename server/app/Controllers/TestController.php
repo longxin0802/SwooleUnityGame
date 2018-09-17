@@ -25,7 +25,7 @@ use Swoft\Http\Message\Server\Request;
  * 控制器demo
  * @Controller(prefix="/demo2")
  */
-class DemoController
+class TestController
 {
 
     /**
