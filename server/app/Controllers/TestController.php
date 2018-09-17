@@ -23,7 +23,7 @@ use Swoft\Http\Message\Server\Request;
 
 /**
  * 控制器demo
- * @Controller(prefix="/demo2")
+ * @Controller(prefix="/test")
  */
 class TestController
 {
