@@ -114,4 +114,11 @@ class TestController
 
         return 'test_index3';
     }
+
+
+    public function index4()
+    {
+
+        return '/test/index4';
+    }
 }
