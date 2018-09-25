@@ -101,7 +101,7 @@ class TestController
     }
 
     /**
-     * @RequestMapping(route="test/index3", method=RequestMethod::GET)
+     * @RequestMapping(route="/test/index3", method=RequestMethod::GET)
      */
     public function index3()
     {
