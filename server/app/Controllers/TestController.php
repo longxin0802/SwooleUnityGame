@@ -101,7 +101,7 @@ class TestController
     }
 
     /**
-     * @RequestMapping(route="/test_index3", method=RequestMethod::GET)
+     * @RequestMapping(route="test/index3", method=RequestMethod::GET)
      */
     public function index3()
     {
@@ -112,6 +112,6 @@ class TestController
             });
         });
 
-        return 'success';
+        return 'test_index3';
     }
 }
