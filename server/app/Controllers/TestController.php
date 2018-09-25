@@ -82,11 +82,28 @@ class TestController
         return compact('get', 'getName', 'post', 'postName', 'inputs', 'inputName');
     }
 
+    
+
     /**
      * 定义一个route,支持get,以"/"开头的定义，直接是根路径，处理uri=/index2
      * @RequestMapping(route="/index2", method=RequestMethod::GET)
      */
     public function index2()
+    {
+        Coroutine::create(function () {
+            App::trace('this is child trace' . Coroutine::id());
+            Coroutine::create(function () {
+                App::trace('this is child child trace' . Coroutine::id());
+            });
+        });
+
+        return 'success';
+    }
+
+    /**
+     * @RequestMapping(route="/test_index3", method=RequestMethod::GET)
+     */
+    public function index3()
     {
         Coroutine::create(function () {
             App::trace('this is child trace' . Coroutine::id());
